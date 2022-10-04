@@ -1,0 +1,16 @@
+platform :ios, '10.0'
+
+target 'GSDMediaCacheDemo' do
+
+ pod 'SDWebImage', '~> 5.11.1'
+ pod 'MBProgressHUD', '~> 1.1.0'
+ pod 'AFNetworking', '~> 4.0.1'
+ pod 'YYWebImage', '~> 1.0.5'
+ pod 'YYModel', '~> 1.0.4'
+ pod 'KSCrash', '~> 1.15.21'
+ pod 'CocoaHTTPServer', '~> 2.3'
+ pod 'GSDMediaCache', :path => '../'
+ pod 'MATLog', '~> 0.0.1'
+ 
+end
+

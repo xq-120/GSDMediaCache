@@ -1,0 +1,494 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8FD283DB27902BC400219BC4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FD283DA27902BC400219BC4 /* AppDelegate.m */; };
+		8FD283DE27902BC400219BC4 /* FDEHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FD283DD27902BC400219BC4 /* FDEHomeViewController.m */; };
+		8FD283E127902BC400219BC4 /* FDEDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FD283E027902BC400219BC4 /* FDEDetailViewController.m */; };
+		8FD283E427902BC400219BC4 /* FDEMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FD283E327902BC400219BC4 /* FDEMessageViewController.m */; };
+		8FD283E727902BC400219BC4 /* FDEMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FD283E627902BC400219BC4 /* FDEMineViewController.m */; };
+		8FD283EA27902BC400219BC4 /* FDETabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FD283E927902BC400219BC4 /* FDETabBarController.m */; };
+		8FD283ED27902BC400219BC4 /* FDEBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FD283EC27902BC400219BC4 /* FDEBaseViewController.m */; };
+		8FD283F027902BC400219BC4 /* FDENavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FD283EF27902BC400219BC4 /* FDENavigationController.m */; };
+		8FD283F327902BC400219BC4 /* FDEItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FD283F227902BC400219BC4 /* FDEItemModel.m */; };
+		8FD283F527902BC400219BC4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8FD283F427902BC400219BC4 /* Assets.xcassets */; };
+		8FD283F827902BC400219BC4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FD283F627902BC400219BC4 /* LaunchScreen.storyboard */; };
+		8FD283FB27902BC400219BC4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FD283FA27902BC400219BC4 /* main.m */; };
+		8FD284042790322300219BC4 /* PAirSandbox.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FD284022790322300219BC4 /* PAirSandbox.m */; };
+		8FD284072790332600219BC4 /* FDEVideoPlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FD284052790332600219BC4 /* FDEVideoPlayViewController.m */; };
+		8FD284122790335600219BC4 /* FDEPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FD284092790335600219BC4 /* FDEPlayerView.m */; };
+		8FD284132790335600219BC4 /* FDEAudioPlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FD2840C2790335600219BC4 /* FDEAudioPlayView.m */; };
+		8FD284142790335600219BC4 /* FDEAudioPlayButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FD2840E2790335600219BC4 /* FDEAudioPlayButton.m */; };
+		8FD284152790335600219BC4 /* YLProgressBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FD284102790335600219BC4 /* YLProgressBar.m */; };
+		8FD284162790335600219BC4 /* FDESlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FD284112790335600219BC4 /* FDESlider.m */; };
+		E61554B44DE419AE4E1EB88B /* libPods-GSDMediaCacheDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 42643683FB278AF6B313030D /* libPods-GSDMediaCacheDemo.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		42643683FB278AF6B313030D /* libPods-GSDMediaCacheDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GSDMediaCacheDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A0643F4A9E845552CE07397 /* Pods-GSDMediaCacheDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GSDMediaCacheDemo.release.xcconfig"; path = "Target Support Files/Pods-GSDMediaCacheDemo/Pods-GSDMediaCacheDemo.release.xcconfig"; sourceTree = "<group>"; };
+		8FD283D627902BC400219BC4 /* GSDMediaCacheDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GSDMediaCacheDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8FD283D927902BC400219BC4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		8FD283DA27902BC400219BC4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		8FD283DC27902BC400219BC4 /* FDEHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FDEHomeViewController.h; sourceTree = "<group>"; };
+		8FD283DD27902BC400219BC4 /* FDEHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FDEHomeViewController.m; sourceTree = "<group>"; };
+		8FD283DF27902BC400219BC4 /* FDEDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FDEDetailViewController.h; sourceTree = "<group>"; };
+		8FD283E027902BC400219BC4 /* FDEDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FDEDetailViewController.m; sourceTree = "<group>"; };
+		8FD283E227902BC400219BC4 /* FDEMessageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FDEMessageViewController.h; sourceTree = "<group>"; };
+		8FD283E327902BC400219BC4 /* FDEMessageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FDEMessageViewController.m; sourceTree = "<group>"; };
+		8FD283E527902BC400219BC4 /* FDEMineViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FDEMineViewController.h; sourceTree = "<group>"; };
+		8FD283E627902BC400219BC4 /* FDEMineViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FDEMineViewController.m; sourceTree = "<group>"; };
+		8FD283E827902BC400219BC4 /* FDETabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FDETabBarController.h; sourceTree = "<group>"; };
+		8FD283E927902BC400219BC4 /* FDETabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FDETabBarController.m; sourceTree = "<group>"; };
+		8FD283EB27902BC400219BC4 /* FDEBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FDEBaseViewController.h; sourceTree = "<group>"; };
+		8FD283EC27902BC400219BC4 /* FDEBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FDEBaseViewController.m; sourceTree = "<group>"; };
+		8FD283EE27902BC400219BC4 /* FDENavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FDENavigationController.h; sourceTree = "<group>"; };
+		8FD283EF27902BC400219BC4 /* FDENavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FDENavigationController.m; sourceTree = "<group>"; };
+		8FD283F127902BC400219BC4 /* FDEItemModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FDEItemModel.h; sourceTree = "<group>"; };
+		8FD283F227902BC400219BC4 /* FDEItemModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FDEItemModel.m; sourceTree = "<group>"; };
+		8FD283F427902BC400219BC4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8FD283F727902BC400219BC4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8FD283F927902BC400219BC4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8FD283FA27902BC400219BC4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8FD284022790322300219BC4 /* PAirSandbox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAirSandbox.m; sourceTree = "<group>"; };
+		8FD284032790322300219BC4 /* PAirSandbox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAirSandbox.h; sourceTree = "<group>"; };
+		8FD284052790332600219BC4 /* FDEVideoPlayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FDEVideoPlayViewController.m; sourceTree = "<group>"; };
+		8FD284062790332600219BC4 /* FDEVideoPlayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FDEVideoPlayViewController.h; sourceTree = "<group>"; };
+		8FD284082790335600219BC4 /* FDEPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FDEPlayerView.h; sourceTree = "<group>"; };
+		8FD284092790335600219BC4 /* FDEPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FDEPlayerView.m; sourceTree = "<group>"; };
+		8FD2840A2790335600219BC4 /* FDEAudioPlayButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FDEAudioPlayButton.h; sourceTree = "<group>"; };
+		8FD2840B2790335600219BC4 /* YLProgressBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLProgressBar.h; sourceTree = "<group>"; };
+		8FD2840C2790335600219BC4 /* FDEAudioPlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FDEAudioPlayView.m; sourceTree = "<group>"; };
+		8FD2840D2790335600219BC4 /* FDESlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FDESlider.h; sourceTree = "<group>"; };
+		8FD2840E2790335600219BC4 /* FDEAudioPlayButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FDEAudioPlayButton.m; sourceTree = "<group>"; };
+		8FD2840F2790335600219BC4 /* FDEAudioPlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FDEAudioPlayView.h; sourceTree = "<group>"; };
+		8FD284102790335600219BC4 /* YLProgressBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLProgressBar.m; sourceTree = "<group>"; };
+		8FD284112790335600219BC4 /* FDESlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FDESlider.m; sourceTree = "<group>"; };
+		90F4AD12501EB3D062C138E4 /* Pods-GSDMediaCacheDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GSDMediaCacheDemo.debug.xcconfig"; path = "Target Support Files/Pods-GSDMediaCacheDemo/Pods-GSDMediaCacheDemo.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8FD283D327902BC400219BC4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E61554B44DE419AE4E1EB88B /* libPods-GSDMediaCacheDemo.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8FD283CD27902BC400219BC4 = {
+			isa = PBXGroup;
+			children = (
+				8FD283D827902BC400219BC4 /* GSDMediaCacheDemo */,
+				8FD283D727902BC400219BC4 /* Products */,
+				A7F6F3E394DC61630084E3A0 /* Pods */,
+				BB96BB8F1AA8EB53F8799ADA /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		8FD283D727902BC400219BC4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8FD283D627902BC400219BC4 /* GSDMediaCacheDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8FD283D827902BC400219BC4 /* GSDMediaCacheDemo */ = {
+			isa = PBXGroup;
+			children = (
+				8FD284012790322300219BC4 /* AirSandbox */,
+				8FD283D927902BC400219BC4 /* AppDelegate.h */,
+				8FD283DA27902BC400219BC4 /* AppDelegate.m */,
+				8FD283DC27902BC400219BC4 /* FDEHomeViewController.h */,
+				8FD283DD27902BC400219BC4 /* FDEHomeViewController.m */,
+				8FD283DF27902BC400219BC4 /* FDEDetailViewController.h */,
+				8FD283E027902BC400219BC4 /* FDEDetailViewController.m */,
+				8FD283E227902BC400219BC4 /* FDEMessageViewController.h */,
+				8FD283E327902BC400219BC4 /* FDEMessageViewController.m */,
+				8FD283E527902BC400219BC4 /* FDEMineViewController.h */,
+				8FD283E627902BC400219BC4 /* FDEMineViewController.m */,
+				8FD284062790332600219BC4 /* FDEVideoPlayViewController.h */,
+				8FD284052790332600219BC4 /* FDEVideoPlayViewController.m */,
+				8FD283E827902BC400219BC4 /* FDETabBarController.h */,
+				8FD283E927902BC400219BC4 /* FDETabBarController.m */,
+				8FD283EB27902BC400219BC4 /* FDEBaseViewController.h */,
+				8FD283EC27902BC400219BC4 /* FDEBaseViewController.m */,
+				8FD283EE27902BC400219BC4 /* FDENavigationController.h */,
+				8FD283EF27902BC400219BC4 /* FDENavigationController.m */,
+				8FD283F127902BC400219BC4 /* FDEItemModel.h */,
+				8FD283F227902BC400219BC4 /* FDEItemModel.m */,
+				8FD2840B2790335600219BC4 /* YLProgressBar.h */,
+				8FD284102790335600219BC4 /* YLProgressBar.m */,
+				8FD2840A2790335600219BC4 /* FDEAudioPlayButton.h */,
+				8FD2840E2790335600219BC4 /* FDEAudioPlayButton.m */,
+				8FD2840F2790335600219BC4 /* FDEAudioPlayView.h */,
+				8FD2840C2790335600219BC4 /* FDEAudioPlayView.m */,
+				8FD284082790335600219BC4 /* FDEPlayerView.h */,
+				8FD284092790335600219BC4 /* FDEPlayerView.m */,
+				8FD2840D2790335600219BC4 /* FDESlider.h */,
+				8FD284112790335600219BC4 /* FDESlider.m */,
+				8FD283F427902BC400219BC4 /* Assets.xcassets */,
+				8FD283F627902BC400219BC4 /* LaunchScreen.storyboard */,
+				8FD283F927902BC400219BC4 /* Info.plist */,
+				8FD283FA27902BC400219BC4 /* main.m */,
+			);
+			path = GSDMediaCacheDemo;
+			sourceTree = "<group>";
+		};
+		8FD284012790322300219BC4 /* AirSandbox */ = {
+			isa = PBXGroup;
+			children = (
+				8FD284022790322300219BC4 /* PAirSandbox.m */,
+				8FD284032790322300219BC4 /* PAirSandbox.h */,
+			);
+			path = AirSandbox;
+			sourceTree = "<group>";
+		};
+		A7F6F3E394DC61630084E3A0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				90F4AD12501EB3D062C138E4 /* Pods-GSDMediaCacheDemo.debug.xcconfig */,
+				7A0643F4A9E845552CE07397 /* Pods-GSDMediaCacheDemo.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		BB96BB8F1AA8EB53F8799ADA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				42643683FB278AF6B313030D /* libPods-GSDMediaCacheDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8FD283D527902BC400219BC4 /* GSDMediaCacheDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8FD283FE27902BC400219BC4 /* Build configuration list for PBXNativeTarget "GSDMediaCacheDemo" */;
+			buildPhases = (
+				4FB3D667AE50AF139B690E9B /* [CP] Check Pods Manifest.lock */,
+				8FD283D227902BC400219BC4 /* Sources */,
+				8FD283D327902BC400219BC4 /* Frameworks */,
+				8FD283D427902BC400219BC4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GSDMediaCacheDemo;
+			productName = GSDMediaCacheDemo;
+			productReference = 8FD283D627902BC400219BC4 /* GSDMediaCacheDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8FD283CE27902BC400219BC4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					8FD283D527902BC400219BC4 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 8FD283D127902BC400219BC4 /* Build configuration list for PBXProject "GSDMediaCacheDemo" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8FD283CD27902BC400219BC4;
+			productRefGroup = 8FD283D727902BC400219BC4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8FD283D527902BC400219BC4 /* GSDMediaCacheDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8FD283D427902BC400219BC4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8FD283F527902BC400219BC4 /* Assets.xcassets in Resources */,
+				8FD283F827902BC400219BC4 /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4FB3D667AE50AF139B690E9B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GSDMediaCacheDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8FD283D227902BC400219BC4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8FD283FB27902BC400219BC4 /* main.m in Sources */,
+				8FD284162790335600219BC4 /* FDESlider.m in Sources */,
+				8FD284072790332600219BC4 /* FDEVideoPlayViewController.m in Sources */,
+				8FD284042790322300219BC4 /* PAirSandbox.m in Sources */,
+				8FD283E427902BC400219BC4 /* FDEMessageViewController.m in Sources */,
+				8FD283F327902BC400219BC4 /* FDEItemModel.m in Sources */,
+				8FD283EA27902BC400219BC4 /* FDETabBarController.m in Sources */,
+				8FD283DB27902BC400219BC4 /* AppDelegate.m in Sources */,
+				8FD283E127902BC400219BC4 /* FDEDetailViewController.m in Sources */,
+				8FD283DE27902BC400219BC4 /* FDEHomeViewController.m in Sources */,
+				8FD284152790335600219BC4 /* YLProgressBar.m in Sources */,
+				8FD283ED27902BC400219BC4 /* FDEBaseViewController.m in Sources */,
+				8FD284132790335600219BC4 /* FDEAudioPlayView.m in Sources */,
+				8FD284122790335600219BC4 /* FDEPlayerView.m in Sources */,
+				8FD284142790335600219BC4 /* FDEAudioPlayButton.m in Sources */,
+				8FD283E727902BC400219BC4 /* FDEMineViewController.m in Sources */,
+				8FD283F027902BC400219BC4 /* FDENavigationController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		8FD283F627902BC400219BC4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8FD283F727902BC400219BC4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8FD283FC27902BC400219BC4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		8FD283FD27902BC400219BC4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8FD283FF27902BC400219BC4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 90F4AD12501EB3D062C138E4 /* Pods-GSDMediaCacheDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 23DWX64F7P;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GSDMediaCacheDemo/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.xq.mediaCache;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8FD2840027902BC400219BC4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7A0643F4A9E845552CE07397 /* Pods-GSDMediaCacheDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 23DWX64F7P;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GSDMediaCacheDemo/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.xq.mediaCache;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8FD283D127902BC400219BC4 /* Build configuration list for PBXProject "GSDMediaCacheDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8FD283FC27902BC400219BC4 /* Debug */,
+				8FD283FD27902BC400219BC4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8FD283FE27902BC400219BC4 /* Build configuration list for PBXNativeTarget "GSDMediaCacheDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8FD283FF27902BC400219BC4 /* Debug */,
+				8FD2840027902BC400219BC4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8FD283CE27902BC400219BC4 /* Project object */;
+}
