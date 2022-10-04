@@ -266,8 +266,8 @@ static const NSInteger kDefaultCacheMaxCacheSize = 1 * 1024 * 1024 * 1024; //1Gi
         if (readingFileHandle == nil) {
             error = [NSError gsd_errorWithCode:GSDAudioCacheErrorReadingFileHandleNilError msg:@"reading file handle nil error"];
 
-            CFAbsoluteTime endTime = (CFAbsoluteTimeGetCurrent() - startTime);
-            LogError(@"读取%lld-%lld数据完成!!!,请求长度：%lld,实际返回：%lld,是否取消：%d，总耗时:%fms", startOffset, startOffset + numberOfBytesToRespondWith - 1, numberOfBytesToRespondWith, numberOfBytesResponded, operation.isCancelled, endTime * 1000.0);
+            CFAbsoluteTime elapsed = (CFAbsoluteTimeGetCurrent() - startTime);
+            LogInfo(@"读取%lld-%lld数据完成!!!,请求长度：%lld,实际返回：%lld,是否取消：%d，总耗时:%fms", startOffset, startOffset + numberOfBytesToRespondWith - 1, numberOfBytesToRespondWith, numberOfBytesResponded, operation.isCancelled, elapsed * 1000.0);
 
             pthread_rwlock_unlock(&self->_rwlock);
 
@@ -311,10 +311,10 @@ static const NSInteger kDefaultCacheMaxCacheSize = 1 * 1024 * 1024 * 1024; //1Gi
             error = [NSError gsd_errorWithCode:GSDAudioCacheErrorCancelled msg:@"取消操作"];
         }
 
-        CFAbsoluteTime endTime = (CFAbsoluteTimeGetCurrent() - startTime);
-        LogError(@"线程：%@，读取%lld-%lld数据完成!!!,请求长度：%lld,实际返回：%lld,是否取消：%d，总耗时:%fms", [NSThread currentThread], startOffset, startOffset + numberOfBytesToRespondWith - 1, numberOfBytesToRespondWith, numberOfBytesResponded, operation.isCancelled, endTime * 1000.0);
-        if (endTime * 1000.0 > 1000) {
-            LogError(@"warning!!!读数据时间过长：%fms", endTime * 1000.0);
+        CFAbsoluteTime elapsed = (CFAbsoluteTimeGetCurrent() - startTime) * 1000;
+        LogInfo(@"线程：%@，读取%lld-%lld数据完成!!!,请求长度：%lld,实际返回：%lld,是否取消：%d，总耗时:%fms", [NSThread currentThread], startOffset, startOffset + numberOfBytesToRespondWith - 1, numberOfBytesToRespondWith, numberOfBytesResponded, operation.isCancelled, elapsed);
+        if (elapsed > 1000) {
+            LogWarn(@"warning!!!读数据时间过长：%fms", elapsed);
         }
         pthread_rwlock_unlock(&self->_rwlock);
 

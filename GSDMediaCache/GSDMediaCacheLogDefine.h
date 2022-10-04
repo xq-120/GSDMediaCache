@@ -23,7 +23,7 @@
 #if GSDMediaCacheLoggingEnabled
 
 #define LogError(frmt, ...)   MATLogError(frmt, ##__VA_ARGS__)
-#define LogWarn(frmt, ...)    MATLogWarn(frmt, ##__VA_ARGS__)
+#define LogWarn(frmt, ...)    MATLogWarning(frmt, ##__VA_ARGS__)
 #define LogInfo(frmt, ...)    MATLogInfo(frmt, ##__VA_ARGS__)
 #define LogDebug(frmt, ...)   MATLogDebug(frmt, ##__VA_ARGS__)
 #define LogVerbose(frmt, ...) MATLogVerbose(frmt, ##__VA_ARGS__)

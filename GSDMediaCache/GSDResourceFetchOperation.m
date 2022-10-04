@@ -44,7 +44,7 @@
 
 - (void)dealloc {
     [self cancel];
-    LogError(@"%@销毁", self);
+    LogInfo(@"%@销毁", self);
 }
 
 - (instancetype)initWithResourceURL:(NSURL *)resourceURL loadingRequest:(AVAssetResourceLoadingRequest *)loadingRequest inSession:(NSURLSession *)session {
@@ -116,8 +116,8 @@
         requestRanges = [resourceRangeTable separateLocalRangeItemsWithReqeustRangeItem:requestRangeItem];
     }
     
-    LogError(@"已缓存区间列表:\n%@", resourceRangeTable.rangeItems);
-    LogError(@"start fetchOp:%@, 原始请求:%lld-%lld,长度:%lld\n拆分请求列表:总计range个数:%ld\n%@", self, requestRangeItem.start, requestRangeItem.end, requestRangeItem.length, requestRanges.count, requestRanges);
+    LogInfo(@"已缓存区间列表:\n%@", resourceRangeTable.rangeItems);
+    LogInfo(@"start fetchOp:%@, 原始请求:%lld-%lld,长度:%lld\n拆分请求列表:总计range个数:%ld\n%@", self, requestRangeItem.start, requestRangeItem.end, requestRangeItem.length, requestRanges.count, requestRanges);
     
     NSMutableArray *rangeTasks = [NSMutableArray array];
     for (GSDRangeItem *rangeItem in requestRanges) {
