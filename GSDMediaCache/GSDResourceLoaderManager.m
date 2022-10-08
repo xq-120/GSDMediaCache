@@ -65,7 +65,7 @@
     NSURL *resourceURL = loadingRequest.request.URL;
     if ([resourceURL gsd_isCustomSchemeURLByContainningSuffix:kCustomSchemeSuffix]) {
         NSURL *originalURL = [resourceURL gsd_recoverCustomSchemeURLByRemovingSuffix:kCustomSchemeSuffix];
-        CFAbsoluteTime startTime = CFAbsoluteTimeGetCurrent();
+
         os_unfair_lock_lock(&_loaderLock);
         GSDResourceLoader *loader = self.loaderDict[originalURL];
         if (loader == nil) {
@@ -73,10 +73,7 @@
             self.loaderDict[originalURL] = loader;
         }
         os_unfair_lock_unlock(&_loaderLock);
-        CFAbsoluteTime endTime = (CFAbsoluteTimeGetCurrent() - startTime);
-        if (endTime >= 2) {
-            NSAssert(NO, @"锁获取时间过长");
-        }
+        
         [loader addLoadingRequest:loadingRequest];
         return YES;
     } else {
@@ -86,14 +83,11 @@
 
 - (void)resourceLoader:(AVAssetResourceLoader *)resourceLoader didCancelLoadingRequest:(AVAssetResourceLoadingRequest *)loadingRequest {
     NSURL *originalURL = [loadingRequest.request.URL gsd_recoverCustomSchemeURLByRemovingSuffix:kCustomSchemeSuffix];
-    CFAbsoluteTime startTime = CFAbsoluteTimeGetCurrent();
+    
     os_unfair_lock_lock(&_loaderLock);
     GSDResourceLoader *loader = self.loaderDict[originalURL];
     os_unfair_lock_unlock(&_loaderLock);
-    CFAbsoluteTime endTime = (CFAbsoluteTimeGetCurrent() - startTime);
-    if (endTime >= 2) {
-        NSAssert(NO, @"锁获取时间过长");
-    }
+    
     [loader cancelLoadingRequest:loadingRequest];
 }
 
@@ -127,14 +121,11 @@
 
 - (GSDResourceLoader *)resourceLoaderWithTask:(NSURLSessionTask *)task {
     NSURL *resourceURL = task.originalRequest.URL;
-    CFAbsoluteTime startTime = CFAbsoluteTimeGetCurrent();
+    
     os_unfair_lock_lock(&_loaderLock);
     GSDResourceLoader *loader = self.loaderDict[resourceURL];
     os_unfair_lock_unlock(&_loaderLock);
-    CFAbsoluteTime endTime = (CFAbsoluteTimeGetCurrent() - startTime);
-    if (endTime >= 2) {
-        NSAssert(NO, @"锁获取时间过长");
-    }
+    
     return loader;
 }
 

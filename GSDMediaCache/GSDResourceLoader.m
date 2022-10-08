@@ -32,7 +32,7 @@
 
 - (void)dealloc {
     [self cancel];
-    LogError(@"%@销毁", self);
+    LogDebug(@"%@销毁", self);
 }
 
 - (instancetype)initWithResourceURL:(NSURL *)resourceURL inSession:(nullable NSURLSession *)session {
@@ -60,7 +60,7 @@
                 operation.delegate = self;
                 [self.fetchOperations addObject:operation];
                 
-                LogError(@"添加loading Request：%p, fetchOp：%@，fetchOpDict：%@", loadingRequest, operation, self.fetchOperations);
+                LogInfo(@"添加loading Request：%p, fetchOp：%@，fetchOpDict：%@", loadingRequest, operation, self.fetchOperations);
 
                 [operation start];
             } else {
@@ -93,7 +93,7 @@
     GSDResourceFetchOperation *fetchOp = nil;
     @synchronized (self) {
         fetchOp = [self fetchOperationForKey:loadingRequest.addressID];
-        LogError(@"取消指定Loading Request：%p, fetchOp：%@，fetchOperations：%@", loadingRequest, fetchOp, self.fetchOperations);
+        LogInfo(@"取消指定Loading Request：%p, fetchOp：%@，fetchOperations：%@", loadingRequest, fetchOp, self.fetchOperations);
         [fetchOp cancel];
         [self.fetchOperations removeObject:fetchOp];
     }
@@ -105,7 +105,7 @@
             return;
         }
         self.cancelled = YES;
-        LogError(@"取消all Loading Request，fetchOpDict：%@", self.fetchOperations);
+        LogInfo(@"取消all Loading Request，fetchOpDict：%@", self.fetchOperations);
         
         for (GSDResourceFetchOperation *fetchOperation in self.fetchOperations.copy) {
             [fetchOperation cancel];
@@ -135,7 +135,7 @@
     if (oldFullFetchOperation != nil && newLoadingRequest.dataRequest.requestsAllDataToEndOfResource) {
         [oldFullFetchOperation cancel];
         [self.fetchOperations removeObject:oldFullFetchOperation];
-        LogError(@"SDK取消旧的满请求：%@", oldFullFetchOperation);
+        LogInfo(@"SDK取消旧的满请求：%@", oldFullFetchOperation);
         return;
     }
     
@@ -150,7 +150,7 @@
         } else {
             [op cancel];
             [self.fetchOperations removeObject:op];
-            LogError(@"SDK优先取消短请求：%@", op);
+            LogInfo(@"SDK优先取消短请求：%@", op);
         }
     }
     
@@ -160,7 +160,7 @@
             GSDResourceFetchOperation *op = self.fetchOperations[i];
             [op cancel];
             [self.fetchOperations removeObject:op];
-            LogError(@"SDK继续移除请求：%@", op);
+            LogInfo(@"SDK继续移除请求：%@", op);
         }
     }
 }
@@ -194,7 +194,7 @@
     @synchronized (self) {
         [self.fetchOperations removeObject:fetchOperation];
     }
-    LogError(@"本次下载完成fetchOp：%@，error:%@，移除Loading Request：%p", fetchOperation, error.localizedDescription, loadingRequest);
+    LogInfo(@"本次下载完成fetchOp：%@，error:%@，移除Loading Request：%p", fetchOperation, error.localizedDescription, loadingRequest);
 }
 
 #pragma mark NSURLSessionDataDelegate

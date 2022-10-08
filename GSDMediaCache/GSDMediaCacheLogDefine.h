@@ -27,6 +27,7 @@
 #define LogInfo(frmt, ...)    MATLogInfo(frmt, ##__VA_ARGS__)
 #define LogDebug(frmt, ...)   MATLogDebug(frmt, ##__VA_ARGS__)
 #define LogVerbose(frmt, ...) MATLogVerbose(frmt, ##__VA_ARGS__)
+#define SetLogLevel(lvl)      [MATLog setLogLevel:lvl]
 
 #else
 
@@ -37,6 +38,7 @@
 #define LogInfo(frmt, ...)       {}
 #define LogDebug(frmt, ...)      {}
 #define LogVerbose(frmt, ...)    {}
+#define SetLogLevel(lvl)         {}
 
 #endif
 

@@ -44,7 +44,7 @@
 
 - (void)dealloc {
     [self cancel];
-    LogInfo(@"%@销毁", self);
+    LogDebug(@"%@销毁", self);
 }
 
 - (instancetype)initWithResourceURL:(NSURL *)resourceURL loadingRequest:(AVAssetResourceLoadingRequest *)loadingRequest inSession:(NSURLSession *)session {

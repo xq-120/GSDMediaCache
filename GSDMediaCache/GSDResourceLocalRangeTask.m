@@ -87,7 +87,7 @@
     } completion:^(long long numberOfBytesResponded, NSError * _Nullable error) {
         
         CFAbsoluteTime endTime = (CFAbsoluteTimeGetCurrent() - startTime);
-        LogError(@"本地请求完成:%@, error:%@, 返回数据长度:%llu, 耗时:%fms", weakSelf, error, numberOfBytesResponded, endTime * 1000.0);
+        LogInfo(@"本地请求完成:%@, error:%@, 返回数据长度:%llu, 耗时:%fms", weakSelf, error, numberOfBytesResponded, endTime * 1000.0);
         
         __strong typeof(weakSelf) strongSelf = weakSelf;
         if (!strongSelf) return ;
@@ -104,11 +104,11 @@
             long long start = rangeItem.start + numberOfBytesResponded;
             long long end = start + (rangeItem.length - numberOfBytesResponded) - 1;
             GSDRangeItem *retryRangeItem = [[GSDRangeItem alloc] initWithStart:start end:end type:GSDRangeItemTypeRemote];
-            LogError(@"本地请求读取失败转为远程请求!!!,range:：%lld-%lld，请求总长度：%lld，op:%@", start, end, end - start + 1, strongSelf);
+            LogInfo(@"本地请求读取失败转为远程请求!!!,range:：%lld-%lld，请求总长度：%lld，op:%@", start, end, end - start + 1, strongSelf);
             
             if (![strongSelf.mediaCache isMediaFileExistWithKey:strongSelf.resourceURL.absoluteString] || retryRangeItem == nil) {
                 [strongSelf.mediaCache deleteCacheWithKey:strongSelf.resourceURL.absoluteString];
-                LogError(@"删除遗留无用缓存");
+                LogInfo(@"删除遗留无用缓存");
             }
         }
         if (strongSelf.delegate && [strongSelf.delegate respondsToSelector:@selector(localRangeTask:didCompleteWithError:)]) {
@@ -117,7 +117,7 @@
         
         [strongSelf done];
     }];
-    LogError(@"本地请求开始:%@, dataTask:%@", self, self.localDataTask);
+    LogInfo(@"本地请求开始:%@, dataTask:%@", self, self.localDataTask);
 }
 
 - (void)cancel {

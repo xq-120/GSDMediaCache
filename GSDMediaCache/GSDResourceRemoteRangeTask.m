@@ -71,7 +71,7 @@
         
         self.dataTask = [self.session dataTaskWithRequest:self.request];
     }
-    LogError(@"远程请求开始：%@, dataTask:%@", self, self.dataTask);
+    LogInfo(@"远程请求开始：%@, dataTask:%@", self, self.dataTask);
     [self.dataTask resume];
 }
 
@@ -99,7 +99,7 @@
         self.hasBuffer = NO;
         if (self.assetData.length > 0 && self.delegate && [self.delegate respondsToSelector:@selector(remoteRangeTask:didReceiveData:offset:)]) {
             [self.delegate remoteRangeTask:self didReceiveData:self.assetData offset:self.nextOffset];
-            LogError(@"远程请求取消,开始flush:loc:%lu, length:%lu", self.nextOffset, self.assetData.length);
+            LogInfo(@"远程请求取消,开始flush:loc:%lu, length:%lu", self.nextOffset, self.assetData.length);
             self.nextOffset += self.assetData.length;
         }
         self.assetData = nil;
@@ -137,7 +137,7 @@ didReceiveResponse:(NSURLResponse *)response
     self.expectedSize = expected;
     self.response = response;
     
-    LogError(@"接收到响应,%@", self);
+    LogInfo(@"接收到响应,%@", self);
     
     NSInteger statusCode = [response respondsToSelector:@selector(statusCode)] ? ((NSHTTPURLResponse *)response).statusCode : 200;
     // Status code should between [200,400)
@@ -158,7 +158,7 @@ didReceiveResponse:(NSURLResponse *)response
 - (void)URLSession:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask didReceiveData:(NSData *)data {
     @synchronized (self) {
         if (self.isCancelled) {
-            LogError(@"case1:didReceiveData回调,但已经取消了,几率很小,data丢弃length:%lu", (unsigned long)data.length);
+            LogInfo(@"case1:didReceiveData回调,但已经取消了,几率很小,data丢弃length:%lu", (unsigned long)data.length);
             return;
         }
         if (self.delegate && [self.delegate respondsToSelector:@selector(remoteRangeTask:didReceiveData:)]) {
@@ -183,7 +183,7 @@ didReceiveResponse:(NSURLResponse *)response
         if (needFlush) {
             @autoreleasepool {
                 if (self.isCancelled) {
-                    LogError(@"case2:didReceiveData回调,但已经取消了,几率很小,data丢弃length:%lu", (unsigned long)data.length);
+                    LogInfo(@"case2:didReceiveData回调,但已经取消了,几率很小,data丢弃length:%lu", (unsigned long)data.length);
                     return;
                 }
                 if (self.delegate && [self.delegate respondsToSelector:@selector(remoteRangeTask:didReceiveData:offset:)]) {
@@ -200,11 +200,11 @@ didReceiveResponse:(NSURLResponse *)response
 #pragma mark NSURLSessionTaskDelegate
 
 - (void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task didCompleteWithError:(NSError *)error {
-    LogError(@"远程请求完成：%@，error:%@，dataTask:%@", self, error, self.dataTask);
+    LogInfo(@"远程请求完成：%@，error:%@，dataTask:%@", self, error, self.dataTask);
     
     @synchronized (self) {
         if (self.isCancelled) { //这里有极小概率会进来
-            LogError(@"这里有极小概率会进来，remoteRangeTask已经取消，但didCompleteDelegate代理方法还是调用了，self:%@,self.delegate:%@", self, self.delegate);
+            LogInfo(@"这里有极小概率会进来，remoteRangeTask已经取消，但didCompleteDelegate代理方法还是调用了，self:%@,self.delegate:%@", self, self.delegate);
             return;
         }
         if (self.hasBuffer) {
@@ -215,7 +215,7 @@ didReceiveResponse:(NSURLResponse *)response
             //理论上不会走到这里，因为didReceiveData里面已经处理过了。
             if (self.assetData.length > 0 && self.delegate && [self.delegate respondsToSelector:@selector(remoteRangeTask:didReceiveData:offset:)]) {
                 [self.delegate remoteRangeTask:self didReceiveData:self.assetData offset:self.nextOffset];
-                LogError(@"远程请求完成, 开始flush:loc:%lu, subdataLength:%lu", self.nextOffset, self.assetData.length);
+                LogInfo(@"远程请求完成, 开始flush:loc:%lu, subdataLength:%lu", self.nextOffset, self.assetData.length);
                 self.nextOffset += self.assetData.length;
             }
         }

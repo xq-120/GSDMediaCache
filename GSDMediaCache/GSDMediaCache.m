@@ -21,6 +21,7 @@
  path/
      /data/
           /xxx.rif
+          /xxx.rta
           /xxx.mp4
  */
 
@@ -69,6 +70,7 @@ static const NSInteger kDefaultCacheMaxCacheSize = 1 * 1024 * 1024 * 1024; //1Gi
                                                  selector:@selector(backgroundDeleteOldFiles)
                                                      name:UIApplicationDidEnterBackgroundNotification
                                                    object:nil];
+        SetLogLevel(3);
     }
 
     return self;
@@ -518,7 +520,6 @@ static const NSInteger kDefaultCacheMaxCacheSize = 1 * 1024 * 1024 * 1024; //1Gi
 
             // Store a reference to this file and account for its total size.
             NSNumber *totalAllocatedSize = resourceValues[NSURLTotalFileAllocatedSizeKey];
-            LogError(@"文件：%@，totalFileAllocatedSize：%@", fileURL, totalAllocatedSize);
             currentCacheSize += totalAllocatedSize.unsignedIntegerValue;
             cacheFiles[fileURL] = resourceValues;
         }
@@ -527,8 +528,7 @@ static const NSInteger kDefaultCacheMaxCacheSize = 1 * 1024 * 1024 * 1024; //1Gi
             [self.fileManager removeItemAtURL:fileURL error:nil];
         }
         
-        LogError(@"已经清理过期缓存：%@", urlsToDelete);
-        LogError(@"当前缓存大小：%lu", currentCacheSize);
+        LogInfo(@"删除过期缓存文件：%@\n当前缓存大小：%lu", urlsToDelete, currentCacheSize);
         
         // If our remaining disk cache exceeds a configured maximum size, perform a second
         // size-based cleanup pass.  We delete the oldest files first.
@@ -585,12 +585,8 @@ static const NSInteger kDefaultCacheMaxCacheSize = 1 * 1024 * 1024 * 1024; //1Gi
                     [remain removeObject:fileURL];
                 }
             }
-            LogError(@"超出maxCacheSize，sortedFiles：%@", sortedFiles);
-            LogError(@"超出maxCacheSize，deletedFileSet：%@", deletedFileSet);
-            LogError(@"超出maxCacheSize，remain：%@", remain);
-            LogError(@"超出maxCacheSize，fragment：%@", fragment);
-            LogError(@"超出maxCacheSize，清理缓存：%@", deletedArr);
-            LogError(@"当前缓存大小：%lu", currentCacheSize);
+            
+            LogInfo(@"超出maxCacheSize，删除较旧的缓存文件：%@\n碎片文件:%@\n当前缓存大小：%lu", deletedArr, fragment, currentCacheSize);
         }
         
         pthread_rwlock_unlock(&self->_rwlock);
