@@ -33,12 +33,12 @@
 
 // Logging Disabled
 
-#define LogError(frmt, ...)      {}
-#define LogWarn(frmt, ...)       {}
-#define LogInfo(frmt, ...)       {}
-#define LogDebug(frmt, ...)      {}
-#define LogVerbose(frmt, ...)    {}
-#define SetLogLevel(lvl)         {}
+#define LogError(frmt, ...)
+#define LogWarn(frmt, ...)
+#define LogInfo(frmt, ...)
+#define LogDebug(frmt, ...)
+#define LogVerbose(frmt, ...)
+#define SetLogLevel(lvl)          
 
 #endif
 

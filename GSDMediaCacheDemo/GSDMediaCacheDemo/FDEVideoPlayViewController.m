@@ -64,6 +64,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [GSDMediaCache.sharedMediaCache setEnableLog:YES];
+    
     [self.playerUrls addObject:[NSURL URLWithString:kUrl5]];
     [self.playerUrls addObject:[NSURL URLWithString:kUrl0]];
     [self.playerUrls addObject:[NSURL URLWithString:kUrl1]];

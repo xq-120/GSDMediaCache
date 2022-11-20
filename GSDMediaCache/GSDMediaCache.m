@@ -29,6 +29,9 @@ static const NSInteger kMaxLocalDataPerPage = 1 * 1024 * 1024; //1MiB
 static const NSInteger kDefaultCacheMaxCacheAge = 60 * 60 * 24 * 7; // 1 week
 static const NSInteger kDefaultCacheMaxCacheSize = 1 * 1024 * 1024 * 1024; //1GiB
 
+static NSInteger logLevel = 3;
+static BOOL enableLog = NO;
+
 @interface GSDMediaCache ()
 
 @property (copy, nonatomic) NSString *path;
@@ -70,10 +73,24 @@ static const NSInteger kDefaultCacheMaxCacheSize = 1 * 1024 * 1024 * 1024; //1Gi
                                                  selector:@selector(backgroundDeleteOldFiles)
                                                      name:UIApplicationDidEnterBackgroundNotification
                                                    object:nil];
-        SetLogLevel(3);
+        [self setEnableLog:NO];
     }
 
     return self;
+}
+
++ (void)setLogLevel:(NSInteger)level {
+    logLevel = level;
+    SetLogLevel(logLevel);
+}
+
+- (void)setEnableLog:(BOOL)isEnable {
+    enableLog = isEnable;
+    if (isEnable) {
+        [self.class setLogLevel:logLevel];
+    } else {
+        SetLogLevel(0);
+    }
 }
 
 - (void)storeResourceInfo:(GSDResourceInfoModel *)resourceInfo

@@ -29,6 +29,8 @@ typedef NS_ENUM(NSInteger, GSDMediaCacheErrorCode)
 
 + (nonnull instancetype)sharedMediaCache;
 
+- (void)setEnableLog:(BOOL)isEnable;
+
 /// 最大磁盘缓存时间,单位:seconds.默认1周=7*24*3600.
 @property (assign, nonatomic) NSInteger maxCacheAge;
 
