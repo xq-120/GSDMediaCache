@@ -351,7 +351,6 @@
         self.loaderManager = [GSDResourceLoaderManager sharedManager];
         urlAsset = [self.loaderManager customSchemeAssetWithURL:url options:nil];
     }
-//    urlAsset = [[AVURLAsset alloc] initWithURL:url options:nil];
     self.playerItem = [AVPlayerItem playerItemWithAsset:urlAsset];
     [self loadPlayer];
 }
