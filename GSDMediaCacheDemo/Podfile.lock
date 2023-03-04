@@ -115,12 +115,11 @@ PODS:
 DEPENDENCIES:
   - AFNetworking (~> 4.0.1)
   - CocoaHTTPServer (~> 2.3)
-  - GSDMediaCache (from `../`)
+  - GSDMediaCache (~> 1.3.0)
   - KSCrash (~> 1.15.21)
   - MATLog (~> 0.1.0)
   - MBProgressHUD (~> 1.1.0)
   - SDWebImage (~> 5.11.1)
-  - YYModel (~> 1.0.4)
   - YYWebImage (~> 1.0.5)
 
 SPEC REPOS:
@@ -129,6 +128,7 @@ SPEC REPOS:
     - CocoaAsyncSocket
     - CocoaHTTPServer
     - CocoaLumberjack
+    - GSDMediaCache
     - KSCrash
     - MATLog
     - MBProgressHUD
@@ -140,10 +140,6 @@ SPEC REPOS:
     - YYImage
     - YYModel
     - YYWebImage
-
-EXTERNAL SOURCES:
-  GSDMediaCache:
-    :path: "../"
 
 SPEC CHECKSUMS:
   AFNetworking: 3bd23d814e976cd148d7d44c3ab78017b744cd58
@@ -163,6 +159,6 @@ SPEC CHECKSUMS:
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
   YYWebImage: 5f7f36aee2ae293f016d418c7d6ba05c4863e928
 
-PODFILE CHECKSUM: 374dfd377210fdf721417d71182e65dd9493e731
+PODFILE CHECKSUM: 8b82a23033d231291d4f9374f301f775120791ea
 
-COCOAPODS: 1.11.3
+COCOAPODS: 1.12.0
