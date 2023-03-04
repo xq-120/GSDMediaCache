@@ -10,7 +10,7 @@
 //
 
 #import "GSDRangeItem.h"
-#import "YYModel.h"
+#import <YYModel/YYModel.h>
 
 @interface GSDRangeItem() <YYModel>
 
