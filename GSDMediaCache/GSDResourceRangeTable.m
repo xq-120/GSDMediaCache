@@ -11,6 +11,11 @@
 
 #import "GSDResourceRangeTable.h"
 #import "GSDRangeUtility.h"
+#import <YYModel/YYModel.h>
+
+@interface GSDResourceRangeTable () <YYModel>
+
+@end
 
 @implementation GSDResourceRangeTable
 

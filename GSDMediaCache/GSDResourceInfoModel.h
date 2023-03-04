@@ -14,7 +14,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface GSDResourceInfoModel : NSObject <YYModel, NSCoding, NSCopying>
+@interface GSDResourceInfoModel : NSObject <NSCoding, NSCopying>
 
 @property (nonatomic, copy) NSURL *resourceURL;
 

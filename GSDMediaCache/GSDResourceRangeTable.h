@@ -14,7 +14,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface GSDResourceRangeTable : NSObject <YYModel, NSCoding, NSCopying>
+@interface GSDResourceRangeTable : NSObject <NSCoding, NSCopying>
 
 @property (nonatomic, assign) long long contentLength;
 

@@ -10,7 +10,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <YYModel.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -19,7 +18,7 @@ typedef NS_ENUM(NSInteger, GSDRangeItemType) {
     GSDRangeItemTypeLocal,
 };
 
-@interface GSDRangeItem : NSObject <YYModel, NSCoding, NSCopying>
+@interface GSDRangeItem : NSObject <NSCoding, NSCopying>
 
 /// 偏移量从0开始.
 @property (nonatomic, assign) long long start;

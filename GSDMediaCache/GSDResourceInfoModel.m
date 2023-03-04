@@ -10,6 +10,11 @@
 //
 
 #import "GSDResourceInfoModel.h"
+#import <YYModel/YYModel.h>
+
+@interface GSDResourceInfoModel () <YYModel>
+
+@end
 
 @implementation GSDResourceInfoModel
 
