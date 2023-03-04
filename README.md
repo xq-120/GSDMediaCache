@@ -20,7 +20,7 @@ iOS边下边播框架for AVPlayer。GSDMediaCache具有如下特点：
     AVURLAsset *urlAsset = [self.loaderManager customSchemeAssetWithURL:url options:nil];
     self.playerItem = [AVPlayerItem playerItemWithAsset:urlAsset];
     
-		// 告诉app支持后台播放
+    // 告诉app支持后台播放
     AVAudioSession *audioSession = [AVAudioSession sharedInstance];
     [audioSession setCategory:AVAudioSessionCategoryPlayback error:nil];
     [audioSession setActive:YES error:nil];
