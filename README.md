@@ -16,7 +16,7 @@ iOS边下边播框架for AVPlayer。GSDMediaCache具有如下特点：
 
 ```objc
 - (void)sd_loadPlayerWithItemUrl:(NSURL *)url {
-		self.loaderManager = [GSDResourceLoaderManager sharedManager];
+    self.loaderManager = [GSDResourceLoaderManager sharedManager];
     AVURLAsset *urlAsset = [self.loaderManager customSchemeAssetWithURL:url options:nil];
     self.playerItem = [AVPlayerItem playerItemWithAsset:urlAsset];
     
