@@ -10,7 +10,7 @@ target 'GSDMediaCacheDemo' do
  pod 'KSCrash', '~> 1.15.21'
  pod 'CocoaHTTPServer', '~> 2.3'
  pod 'GSDMediaCache', :path => '../'
- pod 'MATLog', '~> 0.0.1'
+ pod 'MATLog', '~> 0.1.0'
  
 end
 

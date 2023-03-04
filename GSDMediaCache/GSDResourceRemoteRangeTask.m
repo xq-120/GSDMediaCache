@@ -137,9 +137,10 @@ didReceiveResponse:(NSURLResponse *)response
     self.expectedSize = expected;
     self.response = response;
     
-    LogInfo(@"接收到响应,%@", self);
-    
     NSInteger statusCode = [response respondsToSelector:@selector(statusCode)] ? ((NSHTTPURLResponse *)response).statusCode : 200;
+    
+    LogInfo(@"接收到响应code:%d, %@", statusCode, self);
+    
     // Status code should between [200,400)
     BOOL statusCodeValid = statusCode >= 200 && statusCode < 400;
     if (!statusCodeValid) {

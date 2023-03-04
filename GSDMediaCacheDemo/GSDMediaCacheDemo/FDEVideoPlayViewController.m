@@ -14,7 +14,6 @@
 
 // 测试视频链接
 #define kUrl0 @"https://mvvideo5.meitudata.com/56ea0e90d6cb2653.mp4" //302
-//#define kUrl0 @"https://mvvideoshare2.meitudata.com/56ea0e90d6cb2653.mp4?k=7e1f529ad165716f84003defe820dcde&t=60156937"
 
 #define kUrl1 @"http://vt1.doubanio.com/202001021917/01b91ce2e71fd7f671e226ffe8ea0cda/view/movie/M/301120229.mp4"
 
@@ -22,11 +21,6 @@
 
 #define kUrl4 @"http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"
  
-#define kUrl5 @"http://1251661065.vod2.myqcloud.com/98deaa00vodgzp1251661065/c6200b325285890794913485240/saGb5NcsJREA.mp4" //08:54  528M
-
-#define kUrl6 @"http://devimages.apple.com/iphone/samples/bipbop/bipbopall.m3u8" //这种不能代理系统请求缓存了，否则播放不了。
-
-#define kUrl7 @"https://haoa.haozuida.com/20180123/WPFoXNpV/800kb/hls/YZoAUjRB6205029.ts"  //这种AVPlayer不支持播放。
 
 @interface FDEVideoPlayViewController ()<FDESliderDelegate>
 
@@ -64,16 +58,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [GSDMediaCache.sharedMediaCache setEnableLog:YES];
-    
-    [self.playerUrls addObject:[NSURL URLWithString:kUrl5]];
     [self.playerUrls addObject:[NSURL URLWithString:kUrl0]];
     [self.playerUrls addObject:[NSURL URLWithString:kUrl1]];
     [self.playerUrls addObject:[NSURL URLWithString:kUrl3]];
     [self.playerUrls addObject:[NSURL URLWithString:kUrl4]];
-    [self.playerUrls addObject:[NSURL URLWithString:kUrl5]];
-    [self.playerUrls addObject:[NSURL URLWithString:kUrl6]];
-    [self.playerUrls addObject:[NSURL URLWithString:kUrl7]];
     
     self.audioPlayView = [[FDEAudioPlayView alloc] initWithFrame:CGRectMake(20, 100, 270, 64)];
     [self.view addSubview:self.audioPlayView];
@@ -85,7 +73,7 @@
     
     self.lastBtn.frame = CGRectMake(20, 180, 80, 40);
     self.nextBtn.frame = CGRectMake(120, 180, 80, 40);
-    self.testBtn.frame = CGRectMake(220, 180, 80, 40);
+    self.testBtn.frame = CGRectMake(220, 180, 120, 40);
     
     [self.audioPlayView.playBtn addTarget:self action:@selector(playerBtnClicked:) forControlEvents:UIControlEventTouchUpInside];
     self.audioPlayView.playProgressView.delegate = self;
@@ -637,7 +625,7 @@
     if (!_testBtn) {
         UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
         btn.backgroundColor = [UIColor greenColor];
-        [btn setTitle:@"test" forState:UIControlStateNormal];
+        [btn setTitle:@"test-mainThread" forState:UIControlStateNormal];
         [btn.titleLabel setFont:[UIFont systemFontOfSize:14]];
         [btn addTarget:self action:@selector(testBtnDidClicked:) forControlEvents:UIControlEventTouchUpInside];
         _testBtn = btn;
@@ -661,7 +649,7 @@
 
 - (void)testBtnDidClicked:(id)sender {
     NSLog(@"test main thread");
-    [self showToastWithMessage:@"test"];
+    [self showToastWithMessage:@"test main thread"];
 
 //    [NSTimer scheduledTimerWithTimeInterval:0.5 repeats:YES block:^(NSTimer * _Nonnull timer) {
 //        NSInteger s = arc4random() % 10;

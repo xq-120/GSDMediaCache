@@ -7,7 +7,6 @@
 
 #import "AppDelegate.h"
 #import "FDETabBarController.h"
-#import <CocoaLumberjack/CocoaLumberjack.h>
 
 @interface AppDelegate ()
 
@@ -17,8 +16,6 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [DDLog addLogger:[DDOSLogger sharedInstance]];
-    
     self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
     self.window.backgroundColor = [UIColor whiteColor];
     FDETabBarController *tabController = [[FDETabBarController alloc] init];
