@@ -97,6 +97,8 @@
                selector:@selector(resetPlayerToPlayerLayer)
                    name:UIApplicationWillEnterForegroundNotification
                  object:nil];
+    
+    [[GSDMediaCache sharedMediaCache] setEnableLog: YES];
 }
 
 - (void)removePlayerOnPlayerLayer {
