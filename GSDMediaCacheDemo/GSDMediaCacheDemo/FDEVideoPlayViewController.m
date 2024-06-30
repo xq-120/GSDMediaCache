@@ -13,13 +13,15 @@
 #import "GSDMediaCache.h"
 
 // 测试视频链接
-#define kUrl0 @"https://mvvideo5.meitudata.com/56ea0e90d6cb2653.mp4" //302
+#define kUrl0 @"https://mvvideo5.meitudata.com/56ea0e90d6cb2653.mp4" //2min29s
 
-#define kUrl1 @"http://vt1.doubanio.com/202001021917/01b91ce2e71fd7f671e226ffe8ea0cda/view/movie/M/301120229.mp4"
+#define kUrl1 @"https://media.w3.org/2010/05/sintel/trailer.mp4" //52s
 
-#define kUrl3 @"http://www.w3school.com.cn/example/html5/mov_bbb.mp4"
+#define kUrl2 @"http://mirror.aarnet.edu.au/pub/TED-talks/911Mothers_2010W-480p.mp4" //9min54s
 
-#define kUrl4 @"http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"
+#define kUrl3 @"http://www.w3school.com.cn/example/html5/mov_bbb.mp4" //10s
+
+#define kUrl4 @"http://vjs.zencdn.net/v/oceans.mp4" //46s
  
 
 @interface FDEVideoPlayViewController ()<FDESliderDelegate>
@@ -60,6 +62,7 @@
     
     [self.playerUrls addObject:[NSURL URLWithString:kUrl0]];
     [self.playerUrls addObject:[NSURL URLWithString:kUrl1]];
+    [self.playerUrls addObject:[NSURL URLWithString:kUrl2]];
     [self.playerUrls addObject:[NSURL URLWithString:kUrl3]];
     [self.playerUrls addObject:[NSURL URLWithString:kUrl4]];
     
