@@ -86,7 +86,7 @@
     [self.view addSubview:self.playerView];
     
     self.delegateBtn.frame = CGRectMake(220, CGRectGetMaxY(self.playerView.frame) + 10, 80, 40);
-    
+    self.delegateBtn.hidden = YES;
     self.isDelegated = YES;
     
     [self playWithUrl:self.playerUrls[self.currentIndex]];
